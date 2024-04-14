@@ -1,0 +1,6 @@
+watch images => docker images
+delete images => docker rmi 
+watch containers => docker ps -a 
+create new project => docker build  -t django  .
+build compose => docker-compose up --build
+watch docker compose logs in terminal => docker-compose logs -f
