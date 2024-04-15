@@ -3,4 +3,7 @@ delete images => docker rmi
 watch containers => docker ps -a 
 create new project => docker build  -t django  .
 build compose => docker-compose up --build
+after first build for recreate => docker-compose up
 watch docker compose logs in terminal => docker-compose logs -f
+for add package after build => docker-compose exec backend sh -c "pip install python-decouple"
+delete and recreate all compose and image => docker-compose up --build -d
