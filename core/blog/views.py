@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from django.views.generic.base import TemplateView, RedirectView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -7,6 +7,7 @@ from .models import Post
 from django.shortcuts import get_object_or_404
 from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+
 # Create your views here.
 
 """ function base view show template"""
@@ -88,3 +89,6 @@ class PostEditView(LoginRequiredMixin ,UpdateView):
 class PostDeleteView(LoginRequiredMixin ,DeleteView):
   model = Post
   success_url = '/blog/post/'
+
+
+
